@@ -14,6 +14,6 @@ public interface UserMapper {
     @Select("select *from tb_user where  username=#{usename}")
     User selectByUserName( String usename);
 
-    @Insert("INSERT INTO itheima.tb_user (username, password, gender, addr) VALUES (#{username},#{password},null,null)")
+    @Insert("INSERT INTO tb_user (username, password, gender, addr) VALUES (#{username},#{password},null,null)")
     boolean addUser(User user);
 }
