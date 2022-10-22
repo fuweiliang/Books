@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户注册</title>
+    <style>
+        body {
+            background-image: url("img/reg_bg_min.jpg");
+
+        }
+
+        #baidmeun {
+            width: 400px;
+            background-color: rgb(255, 255, 255, .9);
+            padding: 3.125rem;
+            border-radius: 1.25rem;
+            margin-left: 60%;
+            margin-top: 10%;
+        }
+
+        input[type] {
+            width: 25px;
+            height: 40px;
+        }
+
+        input[placeholder*='请输入'] {
+            width: 250px;
+            height: 40px;
+            border: 1px solid #f7f7f7;
+            border-radius: 5px;
+        }
+
+        .container span {
+            display: inline-block;
+        }
+
+        .container div {
+            margin-top: 20px;
+        }
+
+        input[type='submit'] {
+            width: 90%;
+            height: 40px;
+            background-color: #7AA0F9;
+            border: 1px solid #7AA0F9;
+            border-radius: 10px;
+            color: #FFFFFF;
+        }
+
+        input[type='submit']:hover {
+            width: 90%;
+            height: 40px;
+            background-color: #c7a4c4;
+            border: 1px solid #7AA0F9;
+            border-radius: 10px;
+            color: #FFFFFF;
+        }
+
+        .user {
+            padding: 5%;
+        }
+
+        .password {
+            padding: 5%;
+        }
+
+        #register {
+            padding: 5%;
+        }
+        .checkcode{
+            padding: 5%;
+        }
+    </style>
+</head>
+<body>
+
+<div id="baidbackimg">
+    2022 ©Register
+    <div id="baidmeun">
+        <form action="RegisterServlet" method="post" name="form1">
+
+            <h2>欢迎注册</h2>
+            <div>
+                已有账号<a href="index.html">登录?</a>
+            </div>
+            <div>
+                <div class="user">
+                    <span id="user-info">用户名*</span>
+                    <input type="text" name="userName" placeholder="请输入用户名"/>
+
+<!--                    <input type="text" class="form-control" id="new_email" name="userName" placeholder="请输入用户名" pattern="/[\u4e00-\u9fa5]+/g" oninvalid="setCustomValidity('用户名格式不正确');" οninput="setCustomValidity('');">-->
+                    <!--这里正则开头结尾不能加/，加了后虽然实际邮箱正确但会匹配失败。提交时才触发oninvalid事件(同时我也另外写了Ajax验证)，也可以写在js里-->
+
+                </div>
+                <div class="password">
+                    <span>密&emsp;码*</span>
+                    <input type="password" name="userPassworld" placeholder="请输入密码" />
+                </div>
+                <div class="checkcode">
+                    <span>验证码</span>
+                    <input type="text" id="checkcode" name="checkcode" placeholder="请输入验证码"><br>
+                    <img src="checkCodeServlet">
+                    <a href="#" id="changeImg">看不清?</a>
+                </div>
+                <div id="register">
+                    <input type="submit" value="注册"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

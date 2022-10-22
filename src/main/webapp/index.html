@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>登录表单</title>
+    <link rel="stylesheet" href="src/main/webapp/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <!--    https://fontawesome.com/v5/search?s=solid%2Cbrands-->
+</head>
+<body>
+<img src="img/wave.png" class="wave" alt="">
+<div class="container">
+    <div class="img">
+        <img src="img/bg.svg" alt="">
+    </div>
+    <div class="login-content">
+        <form action="LOginServlet" method="post" name="from" content="'Content-Type': 'application/json'">
+            <img src="img/avatar.svg" alt="">
+            <h2 class="title">欢迎</h2>
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="div">
+                    <h5>用户名*</h5>
+                    <input type="text" class="input" name="username" id="username">
+                </div>
+            </div>
+            <div class="input-div pass">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="div">
+                    <h5>密&emsp;码*</h5>
+                    <input type="password" class="input" name="password" id="passworld">
+                </div>
+            </div>
+            <a href="#">忘记密码?</a>
+            <a class="login" href="baidu.jsp">没有账号，点击注册?</a>
+            <input type="submit" class="btn" value="登录">
+        </form>
+    </div>
+</div>
+<script src="js/main.js">
+
+</script>
+</body>
+</html>
